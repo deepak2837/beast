@@ -1,4 +1,4 @@
-module.exports = {
+export default  {
     userTypes:{
         customer:"CUSTOMER",
         engineer:"ENGINEER",

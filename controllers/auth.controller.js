@@ -1,11 +1,14 @@
-const User = require("../models/user.model");
-const constants = require("../utlis/constants");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const { secret } = require("../configs/auth.config");
+import {User}from "../models/user.model.js";
+import constants from "../utlis/constants.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import { secret } from "../configs/auth.config.js";
 
-exports.signup = async (request, response) => {
-    let userStatus = request.body.userStatus;
+
+export const signup = async (request, response) => {
+    console.log("hitting sign up ")
+    console.log(request.body)
+    let userStatus,userTypes;
 
     if (
         !request.body.userTypes ||
@@ -28,12 +31,19 @@ exports.signup = async (request, response) => {
     }
     try {
         const usercreated = await User.create(userObj)
+        console.log(usercreated)
+        response.send(usercreated)
     }
     catch (e) {
         console.log(e)
 
     }
 
+};
 
+
+export const signin = async (request, response) => {
+    console.log("hitting sign in ")
+    
 
 };

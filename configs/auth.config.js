@@ -1,3 +1,1 @@
-module.exports = {
-    secret: "Deepak-key"
-}
+export const secret= "Deepak-key";
