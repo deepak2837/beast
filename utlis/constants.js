@@ -1,4 +1,4 @@
-export default  {
+export const constants = {
     userTypes:{
         customer:"CUSTOMER",
         engineer:"ENGINEER",
@@ -8,6 +8,13 @@ export default  {
         pending:"PENDING",
         approved:"APPROVED",
         rejected:"REJECTED"
+    },
+    ticketstatus:{
+        open:"OPEN",
+        inprogress:"INPROGRESS",
+        closed:"CLOSED",
+        blocked:"BLOCKED",
+
     }
 
 }

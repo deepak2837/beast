@@ -40,8 +40,15 @@ const UserSchema = mongoose.Schema({
     type:String,
     required:true,
     default:"APPROVED"
+  },
+  ticketCreated:{
+    type:[mongoose.Schema.Types.ObjectId],
+    ref:"Ticket"
+  },
+  ticketAssigned:{
+    type:[mongoose.Schema.Types.ObjectId],
+    ref:"Ticket"
   }
-
 
 });
 export const User = mongoose.model("User", UserSchema);
